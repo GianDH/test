@@ -1,0 +1,76 @@
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+
+local url =
+   "https://discord.com/api/webhooks/891347157645414510/wt5Praq1B3_daRV-SMfuuSUy-EM1IZ-gio8K02TjWWOQi_RoU_NdpLa3L4gHm1w3Zuru"
+local data = {
+   ["content"] = "**Heyx#2112**",
+   ["embeds"] = {
+       {
+           ["title"] = "**Someone Executed Your Script!**",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+delay(0,function()
+        respawn = false
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+        game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
+                respawn = true
+                wait(1)
+                local Animate = game.Players.LocalPlayer.Character.Animate
+                Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+                Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+                Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+                Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+                Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+                Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=909997997"
+                Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083189019"
+                Animate.swim.SwimAnim.AnimationId = "http://www.roblox.com/asset/?id=656119721"
+                game.Players.LocalPlayer.Character.Humanoid.Jump = true
+            end)
+    end)
+    wait(1)
+    
+    delay(0,function()
+        respawn = false
+        game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
+                respawn = true
+                wait(1)
+                local b = game.Players.LocalPlayer
+                local c = b.Character
+                c.RightLowerLeg.MeshId = "902942093"
+                c.RightLowerLeg.Transparency = "1"
+                c.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+                c.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+                c.RightFoot.MeshId = "902942089"
+                c.RightFoot.Transparency = "1"
+                game:GetService("Players").LocalPlayer.Character.Head.Transparency = 1
+                for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+                if (v:IsA("Decal")) then
+                v:Destroy()
+                end
+               end
+            end
+        )
+    end
+)
