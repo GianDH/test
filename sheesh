@@ -50,7 +50,6 @@ delay(0,function()
             end)
     end)
     wait(1)
-    
     delay(0,function()
         respawn = false
         game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
@@ -70,7 +69,5 @@ delay(0,function()
                 v:Destroy()
                 end
                end
-            end
-        )
-    end
-)
+            end)
+    end)
