@@ -44,7 +44,7 @@ delay(0,function()
                 Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
                 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
                 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=909997997"
-                Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=754636589"
+                Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
                 Animate.swim.SwimAnim.AnimationId = "http://www.roblox.com/asset/?id=656119721"
                 game.Players.LocalPlayer.Character.Humanoid.Jump = true
             end)
