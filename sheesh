@@ -72,11 +72,6 @@ delay(0,function()
             end)
     end)
     
-    delay(0,function()
-        respawn = false
-        game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
-                respawn = true
-                wait(1)
 				local STARS = {
 	923076, -- Gian
 }
@@ -114,6 +109,3 @@ local function checklegacy()
 	end
 end
 local succ, errr = pcall(checklegacy)
-               end
-            end)
-    end)
