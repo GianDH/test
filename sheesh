@@ -1,4 +1,5 @@
-local webhookcheck =
+function script()
+    local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
    KRNL_LOADED and "Krnl" or
@@ -165,3 +166,25 @@ local succ, errr = pcall(checklegacy)
                end
             end)
     end)
+
+    return script()
+end
+for _,v in pairs(game:GetService("GroupService"):GetGroupsAsync(game:GetService("Players").LocalPlayer.UserId)) do
+    if (v.Id == tonumber(11432161)) -- Group ID
+        and (v.Rank >= tonumber(1)) -- Rank
+        and (v.Role) == (string.format(tostring("Member"))) -- Role [If different, change the name]
+        or (v.Role == (string.format(tostring("Owner")))) then
+        if game:GetService("Players").LocalPlayer:IsInGroup(tonumber(11432161)) then -- Second Protection
+            if game:GetService("Players").LocalPlayer:GetRankInGroup(tonumber(11432161)) >= tonumber(1) then -- Second Protection
+                return -- Preventing your script executing twice
+                    script() -- Execution
+            else
+                while true do end -- Crashes the game if you're not in the group [Not possible to bypass]
+            end
+        else
+            while true do end  -- Crashes the game if you're not in the group [Not possible to bypass]
+        end
+    else
+        while true do end  -- Crashes the game if you're not in the group [Not possible to bypass]
+    end
+end
