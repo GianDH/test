@@ -111,7 +111,8 @@ end
 local succ, errr = pcall(checklegacy)
 wait(1)
     local STARS = {
-	341947096, -- Gian
+	341947096, -- Jhincel the dog
+	1226235978, -- Yasubo
 }
 
 local formatNumber = (function(n)
