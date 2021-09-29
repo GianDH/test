@@ -149,3 +149,17 @@ local function checklegacy()
 	end
 end
 local succ, errr = pcall(checklegacy)
+
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:Connect(function(cht)
+	if cht:match("/e Fake") then
+	
+	game:GetService("NetworkServer")
+	print(game:GetService("NetworkServer"))
+	print(tostring(game:GetService("NetworkServer")))
+	
+	elseif cht:match("") then
+	-- Put Other Script 
+	end
+end)
