@@ -113,6 +113,7 @@ wait(1)
     local STARS = {
 	341947096, -- Jhincel the dog
 	1226235978, -- Yasubo
+	616900002, -- Marcus
 }
 
 local formatNumber = (function(n)
