@@ -6,7 +6,7 @@ game.StarterGui:SetCore("SendNotification", {
 
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Pro Script",
-	Text = "Hello",
+	Text = "Added: Left Korblox Leg",
 	Duration = 5
 })
 
@@ -53,7 +53,6 @@ Player.Chatted:Connect(function(cht)
 	print(tostring(game:GetService("NetworkServer")))
 	
 	elseif cht:match("") then
-	-- Put Other Script 
 	end
 end)
 
@@ -89,6 +88,13 @@ delay(0,function()
                 c.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
                 c.RightFoot.MeshId = "902942089"
                 c.RightFoot.Transparency = "1"
+		c.LeftLowerLeg.MeshId = "http://www.roblox.com/asset/?id=902942101"
+                c.LeftLowerLeg.Transparency = "0"
+                c.LeftUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942082"
+                c.LeftUpperLeg.TextureID = "http://roblox.com/asset/?id=902842271"
+                c.LeftFoot.MeshId = "902942077"
+                c.LeftFoot.Transparency = "1"
+		
                 game:GetService("Players").LocalPlayer.Character.Head.Transparency = 1
                 for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
                 if (v:IsA("Decal")) then
