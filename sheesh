@@ -56,25 +56,6 @@ Player.Chatted:Connect(function(cht)
 	end
 end)
 
-delay(0,function()
-        respawn = false
-        game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
-                respawn = true
-                wait(1)
-                local Animate = game.Players.LocalPlayer.Character.Animate
-                Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
-                Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
-                Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
-                Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
-                Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
-                Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=909997997"
-                Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
-                Animate.swim.SwimAnim.AnimationId = "http://www.roblox.com/asset/?id=656119721"
-                game.Players.LocalPlayer.Character.Humanoid.Jump = true
-            end)
-    end)
-    wait(1)
     delay(0,function()
         respawn = false
         game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
@@ -94,90 +75,23 @@ delay(0,function()
                 c.LeftUpperLeg.TextureID = "http://roblox.com/asset/?id=902842271"
                 c.LeftFoot.MeshId = "902942077"
                 c.LeftFoot.Transparency = "1"
-		
                 game:GetService("Players").LocalPlayer.Character.Head.Transparency = 1
                 for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
                 if (v:IsA("Decal")) then
                 v:Destroy()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+                Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+                Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+                Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+                Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+                Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+                Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=909997997"
+                Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+                Animate.swim.SwimAnim.AnimationId = "http://www.roblox.com/asset/?id=656119721"
+                game.Players.LocalPlayer.Character.Humanoid.Jump = true
                 end
                end
             end)
     end)
 
-				    local STARS = {
-	923076, -- Gian
-}
 
-local formatNumber = (function(n)
-	n = tostring(n)
-	return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
-end)
-
-local function checklegacy()
-for i,v in pairs(game:GetService('Workspace').Players:GetChildren()) do
-if v:FindFirstChild('UpperTorso') then
-if not v:FindFirstChild('UpperTorso'):FindFirstChild('OriginalSize') then
-local plrcheck = game:GetService('Players'):FindFirstChild(v.Name)
-if plrcheck then
-local plrID = game:GetService('Players'):FindFirstChild(v.Name).UserId
-if table.find(STARS, plrID) then
-if v:FindFirstChildWhichIsA('Humanoid') then
-v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐] ' .. game.Players[v.Name].DisplayName)
-						end
-					end
-				end
-			else
-				local plrcheck = game.Players:FindFirstChild(v.Name)
-				if plrcheck then
-				local plrID = game.Players:FindFirstChild(v.Name).UserId
-					if table.find(STARS, plrID) then
-						if v:FindFirstChildWhichIsA('Humanoid') then
-							v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐] ' .. game.Players[v.Name].DisplayName)
-										end
-									end
-								end
-						end
-																end
-															end
-														end
-					local succ, errr = pcall(checklegacy)
- 
-				    local STARS = {
-	341947096, -- Jhincel the dog
-	1226235978, -- Yasubo
-	616900002, -- Marcus
-}
-
-local formatNumber = (function(n)
-	n = tostring(n)
-	return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
-end)
-
-local function checklegacy()
-	for i,v in pairs(game:GetService('Workspace').Players:GetChildren()) do
-		if v:FindFirstChild('UpperTorso') then
-			if not v:FindFirstChild('UpperTorso'):FindFirstChild('OriginalSize') then
-				local plrcheck = game:GetService('Players'):FindFirstChild(v.Name)
-				if plrcheck then
-					local plrID = game:GetService('Players'):FindFirstChild(v.Name).UserId
-					if table.find(STARS, plrID) then
-						if v:FindFirstChildWhichIsA('Humanoid') then
-							v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🐶] ' .. game.Players[v.Name].DisplayName)
-						end
-					end
-				end
-			else
-				local plrcheck = game.Players:FindFirstChild(v.Name)
-				if plrcheck then
-					local plrID = game.Players:FindFirstChild(v.Name).UserId
-					if table.find(STARS, plrID) then
-						if v:FindFirstChildWhichIsA('Humanoid') then
-							v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🐶] ' .. game.Players[v.Name].DisplayName)
-						end
-					end
-				end
-			end
-		end
-	end
-end
-local succ, errr = pcall(checklegacy)
