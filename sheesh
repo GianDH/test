@@ -11,6 +11,7 @@ game.StarterGui:SetCore("SendNotification", {
 })
 
 delay(0,function()respawn = false
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
 respawn = true
 wait(1)
