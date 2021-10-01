@@ -1,6 +1,6 @@
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Pro Script",
-	Text = "Korblox, Headless, Animations Added",
+	Text = "Korblox, Headless, Animations Script",
 	Duration = 5
 })
 
