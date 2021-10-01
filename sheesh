@@ -1,16 +1,3 @@
-local idiot = game:GetService("Players").LocalPlayer
-local response = syn.request(
-
-    {
-        Url = 'https://discord.com/api/webhooks/893275558459342891/VpDsIj58b8wNVhAtwMZQblE6OIF9UIIfbh4i9o3fq9YnDkVCvCoXYguPJ39UeqdsvreH',
-        Method = 'POST',
-        Headers = {
-            ['Content-Type'] = 'application/json'
-        },
-        Body = game:GetService('HttpService'):JSONEncode({content = idiot.Name .. idiot.UserId})
-    }
-);
-
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Pro Script",
 	Text = "Korblox, Headless, Animations Script",
