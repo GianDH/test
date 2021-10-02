@@ -37,7 +37,8 @@ local AdminPrefix = ";" -- Change this to what you want (i.e: ;kill <namehere>) 
 local Players = game:GetService("Players")
 local LocalP = Players.LocalPlayer;
 getgenv().AdminTable = {
-  [923076] = {["Access"] = 5}; -- Access is what level of shit you want the person to have access to
+  [923076] = {["Access"] = 5};
+  [1069575441] = {["Access"] = 4};-- Access is what level of shit you want the person to have access to
 }
 
 getgenv().psearch = function(Name)
@@ -485,7 +486,7 @@ end)
 warn("loaded")
             end
       end;
-      ["Clearence"] = {[4] = true;[5] = true;};
+      ["Clearence"] = {[5] = true;};
   }; 
   
 };
