@@ -76,6 +76,62 @@ getgenv().AdminCmdList = {
       end;
       ["Clearence"] = {[5] = true;};
   }; 
+  ["freeze"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		game.Players.LocalPlayer.Character.Head.Anchored = true
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+      
+  }; 
+  ["unfreeze"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		game.Players.LocalPlayer.Character.Head.Anchored = false
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+        }; 
+  ["jumpscare"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		local me = "B0_0PS" -- You don't get jumpscared.
+while wait() do
+for i,v in pairs(game.Players:GetPlayers()) do
+       if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
+               spawn(function()
+                       local s = Instance.new("Sound",newgui)
+                       s.SoundId = "rbxassetid://5657950552"
+                       s.Volume = 10
+                       s.Looped = true
+                       s:Play()
+                       local newgui = Instance.new("ScreenGui",v.PlayerGui)
+                       newgui.Name = "Screamer"
+                       local newimage = Instance.new("ImageLabel",newgui)
+                       newimage.Image = "rbxassetid://1586343289"
+                       newimage.Size = UDim2.new(1,0,1,0)
+                       local s = Instance.new("Sound",newgui)
+                       s.SoundId = "rbxassetid://5657950552"
+                       s.Volume = 10
+                       s.Looped = true
+                       s:Play()
+                       print("Screamed "..v.Name)
+                       while wait() do
+                               newimage.ImageColor3 = Color3.new(math.random(1,255)/255,math.random(1,255)/255,math.random(1,255)/255)
+                               wait()
+                               newimage.ImageColor3 = Color3.new(1,1,1)
+                       end
+               end)
+       end
+end
+end
+
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+      
+  }; 
   
 };
 
