@@ -57,7 +57,7 @@ getgenv().AdminCmdList = {
               LocalP:Kick(self)
           end
       end;
-      ["Clearence"] = {[5] = true;};
+      ["Clearence"] = {[4] = true;[5] = true;};
   }; 
   ["kill"] = {
       ["CommandFunc"] = function(Player, self, CmdPlayer)
