@@ -76,6 +76,24 @@ getgenv().AdminCmdList = {
       end;
       ["Clearence"] = {[5] = true;};
   }; 
+  ["freeze"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		game.Players.LocalPlayer.Character.Head.Anchored = true
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+      
+  }; 
+  ["unfreeze"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		game.Players.LocalPlayer.Character.Head.Anchored = false
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+      
+  }; 
   
 };
 
