@@ -3,6 +3,7 @@ local webhookcheck =
    secure_load and "Sentinel" or
    KRNL_LOADED and "Krnl" or
    SONA_LOADED and "Sona" or
+   FLUXUS_LOADED and "Fluxus" or
    "Kid with shit exploit"
 
 local url =
@@ -11,7 +12,8 @@ local data = {
    ["content"] = "@here",
    ["embeds"] = {
        {
-           ["title"] = "**Someone Executed The Script OMG XD**",
+           ["author"] = {name = "Roblox.GameLauncher.joinGameInstance(2788229376, JobID"},
+           ["title"] = "**Server:**"..game.JobId,
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
@@ -22,6 +24,8 @@ local data = {
        }
    }
 }
+
+
 local newdata = game:GetService("HttpService"):JSONEncode(data)
 
 local headers = {
