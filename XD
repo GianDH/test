@@ -6,7 +6,7 @@ game.StarterGui:SetCore("SendNotification", {
 
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Pro Script",
-	Text = "Added: Valkyrie do :Valk everytime you die",
+	Text = "Added: Valkyrie do use verified hat to work this also breaks da hood so.. Sorry Da Hood Mods?",
 	Duration = 5
 })
 
