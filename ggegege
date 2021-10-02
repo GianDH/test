@@ -46,6 +46,5 @@ delay(0,function()
                 c.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
                 c.RightFoot.MeshId = "902942089"
                 c.RightFoot.Transparency = "1"
-               end
             end)
     end)
