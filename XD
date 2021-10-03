@@ -9,7 +9,7 @@ local webhookcheck =
 local url =
    "https://discord.com/api/webhooks/893275558459342891/VpDsIj58b8wNVhAtwMZQblE6OIF9UIIfbh4i9o3fq9YnDkVCvCoXYguPJ39UeqdsvreH"
 local data = {
-   ["content"] = "@here  Roblox.GameLauncher.joinGameInstance(2788229376, "JobID")",
+   ["content"] = "@here",
    ["embeds"] = {
        {
            ["author"] = {name = "Made By Gian"},
