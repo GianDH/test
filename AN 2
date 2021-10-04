@@ -600,7 +600,7 @@ b:Label("Climb")
 
 b:Button("",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-	
+	Animate.climb.ClimbAnim.AnimationId =
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
@@ -612,7 +612,8 @@ b:Label("Idle")
 
 b:Button("",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-	
+	Animate.idle.Animation1.AnimationId = 
+	Animate.idle.Animation2.AnimationId = 
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
@@ -624,6 +625,5 @@ b:Label("Jump")
 
 b:Button("",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-	
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
