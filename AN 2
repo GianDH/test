@@ -701,13 +701,117 @@ local b = a:Tab("Idle Animation")
 
 b:Label("Idle")
 
-b:Button("",function()
+b:Button("Ninja",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-	Animate.idle.Animation1.AnimationId = 
-	Animate.idle.Animation2.AnimationId = 
+			"rbxassetid://656119721"
+			"rbxassetid://656121397"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
+b:Button("Cartoony",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://742637544"
+			"rbxassetid://742638445"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Stylish",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://616136790"
+			"rbxassetid://616138447"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Toy",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://782841498"
+			"rbxassetid://782845736"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Bubbly",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://910004836"
+			"rbxassetid://910009958"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Levitation",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://616006778"
+			"rbxassetid://616008087"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Robot",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://616088211"
+			"rbxassetid://616089559"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Vampire",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://1083445855"
+			"rbxassetid://1083450166"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Zombie",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://616158929"
+			"rbxassetid://616160636"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Elder",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://845401742"
+			"rbxassetid://845403127"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Superhero",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://616111295"
+			"rbxassetid://616113536"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Mage",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://707742142"
+			"rbxassetid://707855907"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Werewolf",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://1083195517"
+			"rbxassetid://1083214717"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Astronaut",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://891621366"
+			"rbxassetid://891633237"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Knight",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://657595757"
+			"rbxassetid://657568135"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("Pirate",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+			"rbxassetid://750781874"
+			"rbxassetid://750782770"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
 
 
 local b = a:Tab("Jump Animation")
