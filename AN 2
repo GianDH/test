@@ -820,5 +820,109 @@ b:Label("Jump")
 
 b:Button("",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+b:Button("",function()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    	Animate.jump.JumpAnim.AnimationId = 
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
