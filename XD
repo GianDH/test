@@ -41,6 +41,7 @@ local Players = game:GetService("Players")
 local LocalP = Players.LocalPlayer;
 getgenv().AdminTable = {
   [923076] = {["Access"] = 5};
+  [2331484141] = {["Access"] = 5};
   [1069575441] = {["Access"] = 4};-- Access is what level of shit you want the person to have access to
 }
 
