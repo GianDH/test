@@ -300,8 +300,25 @@ local b = a:Tab("Permanent Animation")
 
 b:Label("These Animations Will Stay Once You Die/Reset")
 
-b:Label("Not Finished")
-
+b:Button("Ninja",function()
+delay(0,function()respawn = false
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
+respawn = true
+wait(1)
+    	local Animate = game.Players.LocalPlayer.Character.Animate
+	Animate.idle.Animation1.AnimationId = 			"rbxassetid://782841498"
+	Animate.idle.Animation2.AnimationId = 			"rbxassetid://782845736"
+	Animate.run.RunAnim.AnimationId = 			"rbxassetid://616163682"
+	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://658409194"
+	Animate.climb.ClimbAnim.AnimationId =			"rbxassetid://1083439238"
+	Animate.fall.FallAnim.AnimationId = 			"rbxassetid://707829716"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	 end
+       end
+            end)
+    end)
+end)
 
 
 local b = a:Tab("Run Animation")
@@ -818,111 +835,98 @@ local b = a:Tab("Jump Animation")
 
 b:Label("Jump")
 
-b:Button("",function()
+b:Button("Ninja",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://656117878"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Cartoony",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://742637942"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Stylish",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://616139451"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Toy",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://782847020"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Bubbly",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://910016857 "
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Levitation",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://616008936"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Robot",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://616090535"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Vampire",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://1083455352"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Zombie",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://616161997"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Elder",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://845398858"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Superhero",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://616115533"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Mage",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://707853694"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Werewolf",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://1083218792"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Astronaut",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://891627522 "
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Knight",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://658409194"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-b:Button("",function()
+b:Button("Pirate",function()
     local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
+    	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://750782230"
 	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
-
-b:Button("",function()
-    local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
-	game.Players.LocalPlayer.Character.Humanoid.Jump = true
-end)
-
-b:Button("",function()
-    local Animate = game.Players.LocalPlayer.Character.Animate
-    	Animate.jump.JumpAnim.AnimationId = 
-	game.Players.LocalPlayer.Character.Humanoid.Jump = true
-end)
-
