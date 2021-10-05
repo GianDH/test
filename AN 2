@@ -306,18 +306,24 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 game.Players.LocalPlayer.CharacterAdded:Connect(function(a)
 respawn = true
 wait(1)
-    	local Animate = game.Players.LocalPlayer.Character.Animate
-	Animate.idle.Animation1.AnimationId = 			"rbxassetid://782841498"
-	Animate.idle.Animation2.AnimationId = 			"rbxassetid://782845736"
-	Animate.run.RunAnim.AnimationId = 			"rbxassetid://616163682"
-	Animate.jump.JumpAnim.AnimationId = 			"rbxassetid://658409194"
-	Animate.climb.ClimbAnim.AnimationId =			"rbxassetid://1083439238"
-	Animate.fall.FallAnim.AnimationId = 			"rbxassetid://707829716"
-	game.Players.LocalPlayer.Character.Humanoid.Jump = true
-	 end
+local b = game.Players.LocalPlayer
+local c = b.Character
+ game:GetService("Players").LocalPlayer.Character.Head.Transparency = 0
+ for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if (v:IsA("Decal")) then
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=909997997"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+Animate.swim.SwimAnim.AnimationId = "http://www.roblox.com/asset/?id=656119721"
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+ end
        end
             end)
-    end)
 end)
 
 
