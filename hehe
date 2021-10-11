@@ -12,7 +12,7 @@ local data = {
    ["content"] = "@here",
    ["embeds"] = {
        {
-           ["author"] = {name = "Roblox.GameLauncher.joinGameInstance(2788229376, JobID"},
+           ["author"] = {name = "Korblox i think"},
            ["title"] = "**Server:**"..game.JobId,
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
            ["type"] = "rich",
