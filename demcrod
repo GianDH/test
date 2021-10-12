@@ -12,7 +12,7 @@ local data = {
    ["content"] = "@here",
    ["embeds"] = {
        {
-           ["author"] = {name = "Made By Gian"},
+           ["author"] = {name = "Admin"},
            ["title"] = ""..game.JobId,
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
            ["type"] = "rich",
