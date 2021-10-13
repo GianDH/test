@@ -182,7 +182,7 @@
 	local plr = game.Players.LocalPlayer
 
 	plr:GetMouse().KeyDown:Connect(function(K)
-		if K == "p" then
+		if K == "C" then
 			Animations.Visible = false
 		end
 	end)
