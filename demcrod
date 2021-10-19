@@ -1,3 +1,4 @@
+
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
@@ -12,8 +13,8 @@ local data = {
    ["content"] = "@here",
    ["embeds"] = {
        {
-           ["author"] = {name = "Admin"},
-           ["title"] = ""..game.JobId,
+           ["author"] = {name = "1 Leg Korblox Updated Webhook"},
+           ["title"] = "https://www.roblox.com/home?placeID=2788229376&gameID="..game.JobId,
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
